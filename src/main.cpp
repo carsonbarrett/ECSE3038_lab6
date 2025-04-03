@@ -104,5 +104,4 @@ Serial.printf("Temperature: %.2f°C\n", temperature);
   }
   
   delay(5000);
-
 }
