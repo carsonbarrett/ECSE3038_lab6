@@ -1,0 +1,29 @@
+# IoT Temperature Monitoring and Remote Light Control  
+
+## Purpose  
+This code was written as part of a lab to demonstrate the ability to interact with a remote server using HTTP requests with an ESP32 or similar microcontroller.  
+
+Additionally, the project showcases real-time IoT control, where a user can toggle an LED remotely via a web interface.  
+
+## Function Descriptions  
+
+### `void setup()`  
+- Initializes serial communication.  
+- Configures the LED pin as an output.  
+- Sets the ADC resolution for reading temperature.  
+- Connects the device to a WiFi network.  
+
+### `float readTemperature()`  
+- Reads the analog value from the temperature sensor.  
+- Converts the raw sensor value to voltage.  
+- Computes the temperature in degrees Celsius.  
+- Returns the temperature value.  
+
+### `void loop()`  
+- Checks if the device is still connected to WiFi.  
+- Sends a GET request to retrieve light switch status from the server.  
+- Parses the JSON response to determine if the LED should be turned on or off.  
+- Reads the current temperature using `readTemperature()`.  
+- Sends a PUT request to update the temperature on the server.  
+- Waits for 5 seconds before repeating the process.  
+
