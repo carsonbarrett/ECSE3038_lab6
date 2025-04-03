@@ -7,19 +7,19 @@ Additionally, the project showcases real-time IoT control, where a user can togg
 
 ## Function Descriptions  
 
-### `void setup()`  
+ `void setup()`  
 - Initializes serial communication.  
 - Configures the LED pin as an output.  
 - Sets the ADC resolution for reading temperature.  
 - Connects the device to a WiFi network.  
 
-### `float readTemperature()`  
+ `float readTemperature()`  
 - Reads the analog value from the temperature sensor.  
 - Converts the raw sensor value to voltage.  
 - Computes the temperature in degrees Celsius.  
 - Returns the temperature value.  
 
-### `void loop()`  
+ `void loop()`  
 - Checks if the device is still connected to WiFi.  
 - Sends a GET request to retrieve light switch status from the server.  
 - Parses the JSON response to determine if the LED should be turned on or off.  
